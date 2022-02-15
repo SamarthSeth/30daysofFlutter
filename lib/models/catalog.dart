@@ -1,18 +1,9 @@
 class CatalogModel {
-  static final items = [
-    Item(
-      "XN001",
-      "Xenio Neckband",
-      "Wireless Neckband With Qcharge upto 30H Playback",
-       699,
-      "#000000",
-      "https://xenio.co.in/wp-content/uploads/2021/11/xn001-feature.png",
-    )
-  ];
+  static List<Item> items = [];
 }
 
 class Item {
-  final String id;
+  final int id;
   final String name;
   final String desc;
   final num price;
@@ -20,4 +11,18 @@ class Item {
   final String image;
 
   Item(this.id, this.name, this.desc, this.price, this.color, this.image);
+
+  factory Item.fromMap(Map<String, dynamic> map) {
+    return Item(map["id"], map["name"], map["desc"], map["price"], map["color"],
+        map["image"]);
+  }
+
+  toMap() => {
+        "id": id,
+        "name": name,
+        "desc": desc,
+        "price": price,
+        "color": color,
+        "image": image
+      };
 }
