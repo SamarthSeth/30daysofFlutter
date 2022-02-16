@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:myapp/utils/routes.dart';
 
 class LoginPage extends StatefulWidget {
+  const LoginPage({Key? key}) : super(key: key);
+
   @override
   State<LoginPage> createState() => _LoginPageState();
 }
 
 class _LoginPageState extends State<LoginPage> {
-  //const LoginPage({Key? key}) : super(key: key);
-
   String name = "";
   bool changeButton = false;
 

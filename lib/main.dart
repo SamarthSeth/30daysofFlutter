@@ -4,6 +4,8 @@ import 'package:myapp/Pages/loginpage.dart';
 import 'package:myapp/utils/routes.dart';
 import 'package:myapp/utils/themes.dart';
 
+import 'Pages/cartpage.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -20,9 +22,10 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       initialRoute: MyRoutes.homeRoute,
       routes: {
-        "/": (context) => LoginPage(),
-        MyRoutes.homeRoute: (context) => HomePage(),
-        MyRoutes.loginRoute: (context) => LoginPage()
+        "/": (context) => const LoginPage(),
+        MyRoutes.homeRoute: (context) => const HomePage(),
+        MyRoutes.loginRoute: (context) => const LoginPage(),
+        MyRoutes.cartRoute: (context) => const CartPage(),
       },
     );
   }
